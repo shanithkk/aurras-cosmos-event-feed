@@ -1,0 +1,9 @@
+{
+    "delay": "0",
+    "execMap": {
+        "ts": "ts-node -r tsconfig-paths/register"
+    },
+    "events": {
+        "start": "tslint -c ./tslint.json -t stylish 'src/**/*.ts'"
+    }
+}

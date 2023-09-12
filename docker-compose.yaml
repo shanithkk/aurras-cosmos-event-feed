@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  aurras-event-feed-icon:
+    platform: linux/amd64
+    image: hugobyte/cosmos-event-feed:v0.2
+    container_name: aurras-event-feed-icon
+    restart: always
+    networks:
+      - gateway
+    external_links:
+      - kafka:kafka.docker
+      - apigateway:apigateway.docker
+    env_file:
+      - ./local.env
+    volumes:
+      - ./logs:/logs
+      - ./config:/config
+
+networks:
+  default:
+    name: aurras
+    driver: bridge
+  gateway:
+    name: gateway
+    external: true
