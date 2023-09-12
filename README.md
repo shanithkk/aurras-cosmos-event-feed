@@ -1,8 +1,8 @@
-# Event Feed - ICON
+# Event Feed - Cosmos
 
 Aurras is a middleware that acts as an event processor and a low code workflow orchestration platform. Aurras is being pitched as a next-generation system for enabling decentralized push notification. This middleware solution listens to events from blockchain applications and propagates them to a registered pool of MQTT brokers. The broader architecture consists of parachain from which the middleware listens for the events.
 
-This Event Feed package facilitates to source events from icon chains. The events will be posted to the OpenWhisk system. icon-sdk is used under the hood to establish the connection to blockchain nodes and receive events.
+This Event Feed package facilitates to source events from cosmos chains. The events will be posted to the OpenWhisk system. cosmos-sdk is used under the hood to establish the connection to blockchain nodes and receive events.
 
 ### Installation
 
@@ -11,13 +11,13 @@ Assuming basic dependency such as [git](https://git-scm.com/) and [yarn](https:/
 1. Clone the repository
 
 ```text
-git clone https://github.com/HugoByte/aurras-event-feed-icon-js.git
+git clone https://github.com/HugoByte/aurras-event-feed-cosmos-js.git
 ```
 
   2. Navigate to the cloned directory
 
 ```text
-cd aurras-event-feed-icon-js
+cd aurras-event-feed-cosmos-js
 ```
 
   3. Install dependencies
@@ -42,7 +42,7 @@ OPENWHISK_API_KEY=23bc46b1-71f6-4ed5-8c54-816aa4f8c502:123zO3xZCLrMN6v2BKK1dXYFp
 OPENWHISK_API_HOST=https://139.84.142.77:31001
 OPENWHISK_NAMESPACE=guest
 EVENT_RECEIVER=event-receiver
-EVENT_PROCESSOR=icon-event-processor
+EVENT_PROCESSOR=cosmos-event-processor
 ```
 
 ### Usage
@@ -61,7 +61,7 @@ npm start
 #### Docker Compose
 
 ```text
-docker-compose --project-name icon-aurras up -d
+docker-compose --project-name cosmos-aurras up -d
 ```
 ### License
 Licensed under [Apache-2.0](./LICENSE)

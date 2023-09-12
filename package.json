@@ -1,7 +1,7 @@
 {
-  "name": "cosmos-event-feed-icon-js",
+  "name": "cosmos-event-feed-cosmos-js",
   "version": "0.1.3",
-  "description": "A JS implementation of Event Feed package for Aurras System to source events from icon Based chains",
+  "description": "A JS implementation of Event Feed package for Aurras System to source events from cosmos Based chains",
   "main": "src/index.ts",
   "author": "SHANITH K K",
   "scripts": {

@@ -1,9 +1,4 @@
-import {
-  Event,
-  fromTendermintEvent,
-  GasPrice,
-  calculateFee,
-} from "@cosmjs/stargate";
+import { Event, fromTendermintEvent } from "@cosmjs/stargate";
 import * as dotenv from "dotenv";
 import { AppConfig, loadConfigFromEnv } from "./config_files";
 import { StargateClient } from "@cosmjs/stargate";
@@ -11,20 +6,16 @@ import { StargateClient } from "@cosmjs/stargate";
 dotenv.config();
 export const config: AppConfig = loadConfigFromEnv();
 
-export async function waitForEvent(
+export async function waitEvent(
   signingClient: StargateClient,
   eventName: string[],
-  cb: (e: Event[]) => void,
-  Target_height?: number
+  cb: (e: Event[]) => void
 ) {
   let height = await signingClient.getHeight();
-  if (Target_height != undefined) {
-    height = Target_height;
-  }
   let decodedEvent: Event;
   while (true) {
     const filteredEvents: Array<Event> = [];
-    let tmp = height;
+    const tmp = height;
     const query = `tx.height=` + height;
     await sleep(5000);
     const txs = await signingClient.searchTx(query);
