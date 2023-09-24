@@ -1,9 +1,9 @@
 version: '3.8'
 services:
-  aurras-event-feed-icon:
+  aurras-event-feed-cosmos:
     platform: linux/amd64
     image: hugobyte/cosmos-event-feed:v0.2
-    container_name: aurras-event-feed-icon
+    container_name: aurras-event-feed-cosmos
     restart: always
     networks:
       - gateway
