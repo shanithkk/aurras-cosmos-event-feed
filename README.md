@@ -34,8 +34,7 @@ For local development and testing create a **.env** file with respective configu
 
 ```text
 CHAIN_NAME=NodeTemplate
-CHAIN_ENDPOINT=https://berlin.net.solidwallet.io/api/v3/
-CONTRACT_ADRESS=cxf4958b242a264fc11d7d8d95f79035e35b21c1bb
+CHAIN_ENDPOINT=https://rpc.constantine.archway.tech:443
 EVENT_NAME=CallMessage;CallMessageSent
 KAFKA_BROKERS=172.17.0.1:9092
 OPENWHISK_API_KEY=23bc46b1-71f6-4ed5-8c54-816aa4f8c502:123zO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP
@@ -43,6 +42,7 @@ OPENWHISK_API_HOST=https://139.84.142.77:31001
 OPENWHISK_NAMESPACE=guest
 EVENT_RECEIVER=event-receiver
 EVENT_PROCESSOR=cosmos-event-processor
+TOPIC=157b529f-ac61-47b3-9606-7a8719c9c987
 ```
 
 ### Usage
